@@ -78,6 +78,8 @@ font-family: 'Bebas Neue', sans-serif;
 font-size: 36px;
 color: var(--yellow);
 margin-bottom: 18px;
+margin-top:100px;
+margin-left:100px;
 }
 
 .hero-content p {
@@ -143,7 +145,7 @@ color: var(--charcoal);
 .section p {
 max-width: 700px;
 margin: 0 auto;
-color: var(--charcoal);
+color: var(--offwhite);
 }
 
 footer {
@@ -155,7 +157,7 @@ color: var(--gray);
 }
 
 .services{
-background-color: var(--wood);
+background-color: #1F1F1F;
 scroll-margin-top: 100px;
 }
 .gallery{
@@ -163,10 +165,10 @@ background-color: var(--charcoal);
 scroll-margin-top: 100px;
 }
 .reviews{
-background-color: var(--charcoal);
+background-color: #1F1F1F;
 }
 
-.gallery h3, .reviews h3{
+.gallery h3, .reviews h3, .services h3{
 color: var(--yellow);
 }
 
@@ -365,12 +367,11 @@ padding: 10px;
 /* Carousel Styles */
 .carousel {
 position: relative;
-max-width: 500px;
-margin: 0 auto 30px auto;
+margin: 150px auto 30px auto;
 display: flex;
 align-items: center;
 justify-content: center;
-min-height: 320px;
+min-height: 500px;
 }
 
 .carousel-images {
@@ -378,15 +379,15 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: center;
-width: 350px;
-height: 280px;
+width: 2000px;
+height:600x;
 overflow: hidden;
 position: relative;
 }
 
 .carousel-img {
-width: 350px;
-height: 280px;
+width: 2000px;
+height: 600px;
 object-fit: cover;
 border-radius: 10px;
 box-shadow: 0 4px 16px rgba(0,0,0,0.18);
@@ -403,41 +404,98 @@ opacity: 1;
 z-index: 2;
 }
 
-.carousel-btn {
-background: var(--yellow);
-color: var(--charcoal);
-border: none;
-font-size: 2rem;
-border-radius: 50%;
-width: 40px;
-height: 40px;
-cursor: pointer;
-margin: 0 10px;
-box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-transition: background 0.2s;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.carousel-btn:hover {
-background: var(--burgundy);
-color: var(--offwhite);
-}
-
-@media (max-width: 600px) {
-.carousel {
-max-width: 98vw;
-min-height: 180px;
+/* Carousel Styles */
+.hero .carousel {
+  flex: 2 1 0;
+  max-width: 900px;
+  min-width: 400px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100vh;
 }
 .carousel-images {
-width: 98vw;
-height: 160px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
-.carousel-img, .carousel-img.active {
-width: 98vw;
-height: 160px;
+.carousel-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
 }
+.carousel-img.active {
+  opacity: 1;
+  z-index: 2;
 }
-
-condiv{"display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:40px; max-width:1200px; margin:0 auto 20px auto;"}
-locdic{"min-width:280px; flex:1;}
+.carousel-btn {
+  background: var(--yellow);
+  color: var(--charcoal);
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-btn:hover {
+  background: var(--burgundy);
+  color: var(--offwhite);
+}
+@media (max-width: 900px) {
+  .hero-content, .hero .carousel {
+    max-width: 98vw;
+    min-width: 0;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .carousel-images {
+    height: 220px;
+  }
+  .carousel-img, .carousel-img.active {
+    height: 220px;
+  }
+}
+@media (max-width: 600px) {
+  .carousel {
+    max-width: 98vw;
+    min-height: 180px;
+    width: 100%;
+    height: 180px;
+  }
+  .carousel-images {
+    width: 100vw;
+    height: 160px;
+  }
+  .carousel-img, .carousel-img.active {
+    width: 100vw;
+    height: 160px;
+  }
+}
+.loc:hover, .phone:hover, .insta:hover{
+  color:var(--burgundy);
+}
