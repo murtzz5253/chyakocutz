@@ -1,0 +1,37 @@
+@media (max-width: 600px) {
+  .carousel {
+    max-width: 98vw;
+    min-height: 180px;
+    width: 100%;
+    height: 180px;
+  }
+  .carousel-images {
+    width: 100vw;
+    height: 160px;
+  }
+  .carousel-img, .carousel-img.active {
+    width: 100vw;
+    height: 160px;
+  }
+}
+
+
+.hero .carousel {
+flex: 1 1 350px;
+max-width: 500px;
+min-width: 320px;
+flex-direction:column;
+text-align:center;
+position:absolute;
+width:100%; 
+margin:0 auto;
+height:auto;
+}
+
+  <section class="section gallery" id="gallery">
+    <h3>Our Instagram Gallery</h3>
+    <div style="display: flex; justify-content: center;">
+      <iframe src="https://www.instagram.com/chyakocutz/embed" width="400" height="480" frameborder="0" scrolling="no" allowtransparency="true" style="border-radius:12px; max-width:100%;"></iframe>
+    </div>
+    <p style="margin-top:10px; color:var(--offwhite);">Follow us on <a href="https://www.instagram.com/chyakocutz/" target="_blank" style="color:var(--yellow);">Instagram</a> for the latest cuts!</p>
+  </section>
