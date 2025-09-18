@@ -120,16 +120,19 @@
     width: 100vw;
     min-width: 0;
     max-width: 100vw;
-    height: auto;
+    height: 250px;
+    max-height: 250px;
     margin-top: 20px;
   }
   .carousel-images {
     width: 100vw;
-    height: auto;
+    height: 250px;
+    max-height: 250px;
   }
   .carousel-img, .carousel-img.active {
-    width: 100vw;
-    height: auto;
+    width: auto;
+    height: 100%;
+    object-fit:contain;
   }
   .carousel{
   padding-top:0;
@@ -138,13 +141,18 @@
 
 @media (max-width: 600px) {
   .hero .carousel {
-    height: auto;
+    height: 180px;
+    max-height: 180px;
   }
   .carousel-images {
-    height: auto;
+    height: 180px;
+    max-height: 180px;
   }
   .carousel-img, .carousel-img.active {
-    height: auto;
+    height: 100%;
+    width:auto;
+    max-height:100%;
+    object-fit:contain;
   }
 }
 :root {
